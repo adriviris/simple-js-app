@@ -7,4 +7,4 @@ let pokemonList = [
     {name: 'Snorlax', height: 7, types: ['fat', 'immunity']}
     {name: 'Mewtwo', height: 6, types: 'pressure'}
     {name: 'Ninetales', height: 3, types: 'fire'}
-]
+];
