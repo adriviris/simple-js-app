@@ -13,10 +13,10 @@ let pokemonList = [
 for (let i = 0;  
     i < pokemonList.length; i++) {
         if (pokemonList[i].height > 4) {
-            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + " type! Wow! It is really tall")
+            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + " type! Wow! It is really tall<br>")
         }
         else {
-            document.write(pokemonList[i].name + " is " + pokemonList[i].height) + "feet tall and it is a " + pokemonList[i].types + "type!"
+            document.write(pokemonList[i].name + " is " + pokemonList[i].height + "feet tall and it is a " + pokemonList[i].types + "type!<br>")
         }
 
     }
