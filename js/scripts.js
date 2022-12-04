@@ -36,7 +36,7 @@ for (let i = 0;
             document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + " type! Wow! It is really tall<br>")
         }
         else {
-            document.write(pokemonList[i].name + " is " + pokemonList[i].height + "feet tall and it is a " + pokemonList[i].types + "type!<br>")
+            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + "type!<br>")
         }
 
     }
