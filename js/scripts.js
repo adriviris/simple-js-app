@@ -1,6 +1,6 @@
 
 let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
-// adding an array of 5 different pokemons and their info 
+// adding an array of 5 different pokemon and their info 
 let pokemonList = [
     {name: 'Lucario', height: 4, types: ['steel', 'speed']}
     {name: 'Vaporeon', height: 3, types: 'water'}
