@@ -30,14 +30,23 @@ let pokemonList = [
 ];
 
 //printing all pokemon
-for (let i = 0;  
-    i < pokemonList.length; i++) {
-        if (pokemonList[i].height > 4) {
-            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + " type! Wow! It is really tall<br>")
-        }
-        else {
-            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + "type!<br>")
-        }
+// for (let i = 0;  
+//    i < pokemonList.length; i++) {
+//        if (pokemonList[i].height > 4) {
+//            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + " type! Wow! It is really tall<br>")
+//        }
+//        else {
+//            document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].types + "type!<br>")
+//        }
 
-    }
+//    }
     
+pokemonList.forEach(function(pokemon) {
+    if (pokemon.height > 4) {
+    console.log(pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + " type! Wow! It is really tall");
+}
+// i am a bit confused as to how to include the if/else here
+else {
+    (pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + "type!");
+}
+});
