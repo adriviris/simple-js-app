@@ -50,3 +50,22 @@ else {
     (pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + "type!");
 }
 });
+
+let pokemonRespository = (function() {
+    let pokemonList = [];
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+    function getAll()   {
+        return pokemonList;
+    }
+    return  {
+        add: add,
+        getAll: getAll
+    };
+})();
+
+console.log(pokemonRespository.getAll());
+pokemonRespository.add({name: 'Charmander'});
+console.log(pokemonRespository.getAll())
