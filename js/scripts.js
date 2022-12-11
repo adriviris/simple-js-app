@@ -1,5 +1,25 @@
 
 let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
+
+let pokemonRespository = (function() {
+    let pokemonList = [];
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+    function getAll()   {
+        return pokemonList;
+    }
+    return  {
+        add: add,
+        getAll: getAll
+    };
+})();
+
+console.log(pokemonRespository.getAll());
+pokemonRespository.add({name: 'Mewtwo'});
+console.log(pokemonRespository.getAll())
+
 // adding an array of 5 different pokemon and their info 
 let pokemonList = [
     {
@@ -51,21 +71,3 @@ else {
 }
 });
 
-let pokemonRespository = (function() {
-    let pokemonList = [];
-
-    function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
-    function getAll()   {
-        return pokemonList;
-    }
-    return  {
-        add: add,
-        getAll: getAll
-    };
-})();
-
-console.log(pokemonRespository.getAll());
-pokemonRespository.add({name: 'Charmander'});
-console.log(pokemonRespository.getAll())
