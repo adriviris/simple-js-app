@@ -1,8 +1,7 @@
 
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
-
 let pokemonRespository = (function() {
     let pokemonList = [];
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
 
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -16,9 +15,9 @@ let pokemonRespository = (function() {
     };
 })();
 
-console.log(pokemonRespository.getAll());
+document.write(pokemonRespository.getAll());
 pokemonRespository.add({name: 'Mewtwo'});
-console.log(pokemonRespository.getAll())
+document.write(pokemonRespository.getAll())
 
 // adding an array of 5 different pokemon and their info 
 let pokemonList = [
@@ -63,11 +62,17 @@ let pokemonList = [
     
 pokemonList.forEach(function(pokemon) {
     if (pokemon.height > 4) {
-    console.log(pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + " type! Wow! It is really tall");
+    document.write(pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + " type! Wow! It is really tall" + "</br>");
 }
 // i am a bit confused as to how to include the if/else here
 else {
-    (pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + "type!");
+    document.write(pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + "type!" + "</br>");
 }
 });
 
+pokemonRespository.loadList().then(function() {
+pokemonRespository.getAll().forEach
+function printDetails (pokemon) {
+    pokemonRespository.addListItem(pokemon);
+}
+});
