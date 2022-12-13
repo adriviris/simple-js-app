@@ -1,7 +1,7 @@
 
 let pokemonRespository = (function() {
-    let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
+    let pokemonList = [;
+
 
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -12,8 +12,10 @@ let pokemonRespository = (function() {
     return  {
         add: add,
         getAll: getAll
-    };
-})();
+    },
+];
+
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
 
 document.write(pokemonRespository.getAll());
 pokemonRespository.add({name: 'Mewtwo'});
@@ -70,9 +72,7 @@ else {
 }
 });
 
-pokemonRespository.loadList().then(function() {
 pokemonRespository.getAll().forEach
 function printDetails (pokemon) {
     pokemonRespository.addListItem(pokemon);
 }
-});
