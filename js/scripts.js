@@ -45,7 +45,7 @@ console.log(pokemonRespository.getAll());
 pokemonRespository.add({name: 'Mewtwo'});
 console.log(pokemonRespository.getAll())
 
-pokemonList.forEach(function(pokemon) {
+pokemonRespository.getAll()forEach(function(pokemon) {
     if (pokemon.height > 4) {
     document.write(pokemon.name + " is " + pokemon.height + " feet tall and it is a " + pokemon.types + " type! Wow! It is really tall" + "</br>");
 }
