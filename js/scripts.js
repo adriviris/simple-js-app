@@ -1,4 +1,4 @@
-var pokemonRespository = (function() {
+let pokemonRespository = (function() {
 let pokemonList = [
     {
         name: 'Lucario', 
@@ -55,12 +55,11 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
 
 })();
 
-console.log(pokemonRespository.getAll());
-pokemonRespository.add({name: 'Mewtwo'});
+
+pokemonRespository.add({name: 'Mewtwo', height: 6, types: ["pressure"]});
 
 console.log(pokemonRespository.getAll());
 
 pokemonRespository.getAll().forEach(function(pokemon) {
-
     pokemonRespository.addListItem(pokemon);
 });
