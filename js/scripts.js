@@ -1,5 +1,5 @@
 
-let pokemonRespository = (function() {
+var pokemonRespository = (function() {
 let pokemonList = [
     {
         name: 'Lucario', 
@@ -33,25 +33,25 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
         pokemonList.push(pokemon);
     }
 
-    function addListItem(pokemon){
-        let PokemonList = document.querySelector('.pokemon-list');
-
-        let listItem = document.createElement('li');
-    
-        let button = document.createElement ('button');
-        button.innerText = pokemon.name;
-        button.classList.add ('name-button');
-        
-        PokemonList.appendChild(listItem);
-        listItem.appendChild(button);
-    }
-
     function getAll()   {
         return pokemonList;
     }
+
+    function addListItem(pokemon){
+        
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement ('button');
+    button.innerText = pokemon.name;
+    button.classList.add ('button-class');
+    pokemonList.appendChild(button);
+    listItem.appendChild(pokemonList);
+
+        }
     return  {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem,
     };
 
 })();
@@ -62,13 +62,6 @@ pokemonRespository.add({name: 'Mewtwo'});
 console.log(pokemonRespository.getAll());
 
 pokemonRespository.getAll().forEach(function(pokemon) {
-
-    let pokemonList = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
-    let button = document.createElement ('button');
-        button.innerText = "pokemonName";
-        button.classList.add ('button-class');
-        pokemonList.appendChild(button);
-        listItem.appendChild(pokemonList);
-
+    
+    pokemonRespository.addListItem(pokemon);
 });
