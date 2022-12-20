@@ -1,4 +1,3 @@
-
 var pokemonRespository = (function() {
 let pokemonList = [
     {
@@ -62,6 +61,6 @@ pokemonRespository.add({name: 'Mewtwo'});
 console.log(pokemonRespository.getAll());
 
 pokemonRespository.getAll().forEach(function(pokemon) {
-    
+
     pokemonRespository.addListItem(pokemon);
 });
