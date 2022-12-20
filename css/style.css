@@ -1,4 +1,33 @@
-.listPokemon{
-    border: 4px, coral;
-    margin: auto;
+body {
+    font-family: 'Amatic SC', cursive;
 }
+.pokemon-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.button {
+    border: none;}
+    
+    .name-button {
+    font-family: inherit;
+    font-size: large;
+    padding: 10px;
+    text-align: center;
+    background-color: #415d43;
+    color: silver;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;}
