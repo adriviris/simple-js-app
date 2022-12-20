@@ -32,6 +32,20 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
+
+    function addListItem(pokemon){
+        let PokemonList = document.querySelector('.pokemon-list');
+
+        let listItem = document.createElement('li');
+    
+        let button = document.createElement ('button');
+        button.innerText = pokemon.name;
+        button.classList.add ('name-button');
+        
+        PokemonList.appendChild(listItem);
+        listItem.appendChild(button);
+    }
+
     function getAll()   {
         return pokemonList;
     }
@@ -39,17 +53,11 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
         add: add,
         getAll: getAll
     };
+
 })();
 
 pokemonRespository.add({name: 'Mewtwo'});
 
 pokemonRespository.getAll().forEach(function(pokemon) {
-
-    let unorderedList = document.querySelector ('.pokemon-list')
-    
-    let listItem = document.createElement ('li')
-
-    let button = document.createElement ('button')
-    button.innerText = "name"
-    element.classList.add ('listPokemon')
+    pokemonRespository.aadListItem(pokemon);
 });
