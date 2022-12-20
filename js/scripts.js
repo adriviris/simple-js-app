@@ -45,5 +45,11 @@ pokemonRespository.add({name: 'Mewtwo'});
 
 pokemonRespository.getAll().forEach(function(pokemon) {
 
-    let element = document.querySelector ('.pokemon-list')
+    let unorderedList = document.querySelector ('.pokemon-list')
+    
+    let listItem = document.createElement ('li')
+
+    let button = document.createElement ('button')
+    button.innerText = "name"
+    element.classList.add ('listPokemon')
 });
