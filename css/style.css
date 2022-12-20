@@ -1,33 +1,18 @@
-body {
-    font-family: 'Amatic SC', cursive;
-}
-.pokemon-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-    cursor: pointer;
-    opacity: .8;
-}
-
-.button {
-    border: none;}
-    
-    .name-button {
-    font-family: inherit;
-    font-size: large;
-    padding: 10px;
+.button-class {
+    background-color: salmon;
+    border: 1px;
+    color: antiquewhite;
+    padding: auto;
     text-align: center;
-    background-color: #415d43;
-    color: silver;
     text-decoration: none;
-    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; 
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
     border-radius: 3px;
-    transition-duration: 0.2s;
-    transition-property: opacity;
-    transition-timing-function: ease-in-out;}
+}

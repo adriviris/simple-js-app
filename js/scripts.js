@@ -56,8 +56,19 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
 
 })();
 
+console.log(pokemonRespository.getAll());
 pokemonRespository.add({name: 'Mewtwo'});
 
+console.log(pokemonRespository.getAll());
+
 pokemonRespository.getAll().forEach(function(pokemon) {
-    pokemonRespository.aadListItem(pokemon);
+
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement ('button');
+        button.innerText = "pokemonName";
+        button.classList.add ('button-class');
+        pokemonList.appendChild(button);
+        listItem.appendChild(pokemonList);
+
 });
