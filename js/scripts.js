@@ -27,15 +27,15 @@ let pokemonList = [
     }, 
 ];
 let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
-
+//add new pokemon to pokemonList array
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
-
+//return all items on pokemonList array
     function getAll()   {
         return pokemonList;
     }
-
+//add pokemon to list with format of button
     function addListItem(pokemon){
         
     let pokemonList = document.querySelector('.pokemon-list');
@@ -45,14 +45,22 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
     button.classList.add ('button-class');
     pokemonList.appendChild(button);
     listItem.appendChild(pokemonList);
+    //add event listener to show details when clicked pokemon
+    button.on("click", function() {
+        showDetails(pokemon);
+    });
 
         }
     return  {
-        add: add,
-        getAll: getAll,
-        addListItem: addListItem,
+        add : add,
+        getAll : getAll,
+        addListItem : addListItem,
+        showDetails : showDetails,
     };
 
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
 })();
 
 
