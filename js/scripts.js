@@ -43,10 +43,10 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
     let button = document.createElement ('button');
     button.innerText = pokemon.name;
     button.classList.add ('button-class');
-    pokemonList.appendChild(button);
-    listItem.appendChild(pokemonList);
+    listItem.appendChild(button);
+    pokemonList.appendChild(pokemonList);
     //add event listener to show details when clicked pokemon
-    button.on("click", function() {
+    button.addEventListener("click", function() {
         showDetails(pokemon);
     });
 
