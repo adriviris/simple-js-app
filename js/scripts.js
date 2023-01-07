@@ -26,7 +26,7 @@ let pokemonList = [
         types: 'fire'
     }, 
 ];
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=500';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 //add new pokemon to pokemonList array
     function add(pokemon) {
         pokemonList.push(pokemon);
