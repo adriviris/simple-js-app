@@ -6,8 +6,16 @@ let pokemonRespository = (function(){
 
 //add new pokemon to pokemonList array
 function add(pokemon) {
+    if (
+        typeof pokemon === "object" &&
+        "name" in pokemon
+    ){
     pokemonList.push(pokemon);
+} else {
+    console.log("pokemon is not correct")
 }
+}
+
 //return all items on pokemonList array
 function getAll()   {
     return pokemonList;
