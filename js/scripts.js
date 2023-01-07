@@ -82,3 +82,10 @@ pokemonRespository.loadList().then(function(){
 });
 
 // Not sure what this is anymore
+pokemonRespository.add({name: 'Mewtwo', height: 6, types: ["pressure"]});
+
+console.log(pokemonRespository.getAll());
+
+pokemonRespository.getAll().forEach(function(pokemon) {
+    pokemonRespository.addListItem(pokemon);
+});
