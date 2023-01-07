@@ -61,7 +61,8 @@ function loadList(){
             //add details to the item
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
-            DataTransferItemList.types = details.types;
+            item.types = details.types.map((type) => type.type.name);
+            item.abilities = details.abilities.map((abilities) => abilities.ability.name);
         }).catch(function(e) {
             console.error(e);
         });
@@ -76,6 +77,7 @@ function loadList(){
     return {
         add: add,
         getAll:getAll,
+        addListItem : addListItem,
         loadList:loadList,
         loadDetails : loadDetails,
         showDetails : showDetails
