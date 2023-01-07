@@ -27,6 +27,19 @@ let pokemonList = [
     }, 
 ];
 
+//function add(pokemon) {
+//    if(
+//        typeof pokemon === "object" &&
+//        "name" in pokemon &&
+//        "height" in pokemon &&
+//        "types" in pokemon 
+//    ) {
+//        respository.push(pokemon);
+//    } else {
+//        console.log("pokemon is not correct");
+//    }
+//}
+
 //add api w pokemon details
 let pokemonRespository = (function(){
     let pokemonList = [];
