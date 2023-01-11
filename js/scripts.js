@@ -99,3 +99,14 @@ console.log(pokemonRespository.getAll());
 pokemonRespository.getAll().forEach(function(pokemon) {
     pokemonRespository.addListItem(pokemon);
 });
+
+function validateEmail() {
+    let value = emailInput.value;
+    let hasAtSign = value/index0f('@') > -1;
+    let hasDot = value.index0f('.') > -1;
+    return value && hasAtSign && hasDot;
+}
+function validatePassword() {
+    let value = passwordInput.value;
+    return value && value.length >= 8;
+}
