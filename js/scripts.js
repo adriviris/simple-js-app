@@ -90,23 +90,3 @@ pokemonRespository.loadList().then(function(){
         pokemonRespository.addListItem(pokemon);
     });
 });
-
-// Not sure what this is anymore
-pokemonRespository.add({name: 'Mewtwo', height: 6, types: ["pressure"]});
-
-console.log(pokemonRespository.getAll());
-
-pokemonRespository.getAll().forEach(function(pokemon) {
-    pokemonRespository.addListItem(pokemon);
-});
-
-function validateEmail() {
-    let value = emailInput.value;
-    let hasAtSign = value/index0f('@') > -1;
-    let hasDot = value.index0f('.') > -1;
-    return value && hasAtSign && hasDot;
-}
-function validatePassword() {
-    let value = passwordInput.value;
-    return value && value.length >= 8;
-}
