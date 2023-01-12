@@ -3,9 +3,10 @@
     margin-top: 90px; 
     display: flex;
     flex-direction: column;
+    font-family: 'sofia sans extra condensed';
 }
 
-.button-class {
+.button {
     background-color: salmon;
     border: 1px;
     color: antiquewhite;
@@ -13,6 +14,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: 'quicksand';
     font-size: 16px;
     margin: auto;
     -webkit-transition-duration: 0.4s;
@@ -22,4 +24,9 @@
     color: black;
     border: 2px solid black;
     border-radius: 3px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
 }
