@@ -68,9 +68,13 @@ function loadList(){
         });
     }
 
-    function showDetails(item) {
-        pokemonRespository.loadDetails(item).then(function () {
-            console.log(item);
+    function showDetails(pokemon) {
+        pokemonRespository.loadDetails(pokemon).then(function () {
+            showModal(
+                pokemon.name,
+                pokemon.name + "'s heoght is:" + pokemon.height,
+                pokemon.imageURL
+            );
         });
     }
 
