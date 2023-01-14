@@ -69,10 +69,42 @@ function loadList(){
     }
 
     function showDetails(pokemon) {
+
+        let modalContainer = document.querySelector('#modal-container')
+        showModal(title, text);
+
+//correction
+        //We want to add a confirm and cancel button to the modal
+        let modal = modalContainer.querySelector('.modal');
+
+        let confirmButton = document.createElement('button');
+        confirmButton.classList.add('modal-confirm');
+        confirmButton.innerText = 'Confirm';
+        
+        let cancelButton = document.createElement('button');
+        cancelButton.classList.add('modal-cancel');
+        cancelButton.innerText = 'Cancel';
+    
+        modal.appendChild(confirmButton);
+        modal.appendChild(cancelButton);
+        
+      // We want to focus the confirm Button so that the user can simply press Enter
+        confirmButton.focus();
+    
+        //Return a promise that resolves when confirmed, else rejects
+        return new Promise ((resolve, reject) => {
+        /*cancelButton.addEventListener('click', hideModal);*/
+        confirmButton.addEventListener('click', () => {
+            dialogPromiseReject = null; //Reset this
+            hideModal();
+            resolve();
+        }); 
+//correction
+
         pokemonRespository.loadDetails(pokemon).then(function () {
             showModal(
                 pokemon.name,
-                pokemon.name + "'s heoght is:" + pokemon.height,
+                pokemon.name + "'s height is:" + pokemon.height,
                 pokemon.imageURL
             );
         });
@@ -90,9 +122,10 @@ function loadList(){
 
 //ADD MODAL AND DIALOG - 1.8
 (function(){ 
-    let modalContainer = document.querySelector('#modal-container');
     let dialogPromiseReject; //This can be set later, by showDialog
     
+
+    //let modalContainer = document.querySelector('#modal-container');
     function showModal(title, text) {
     //Clear all existing modal content
     modalContainer.innerHTML = '';
@@ -117,6 +150,9 @@ function loadList(){
     modal.appendChild(contentElement);
     modalContainer.appendChild(modal);
 
+    //TUTOR RECOMMENDATION 
+
+    /*
     modalContainer.classList.add('is-visible');
 }
     
@@ -196,7 +232,7 @@ function showDialog(title, text) {
       // We only want to close if the user clicks directly on the overlay
     let target = e.target;
     if (target === modalContainer) {
-    hideModal();
+    hideModal(); */
     }
 })();
     //THE RETURN STATEMENT HERE - end of 1.8
