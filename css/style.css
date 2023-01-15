@@ -21,7 +21,7 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s; 
     cursor: pointer;
-    border: 2px #0d4eb8;
+    border: 2px #0d4eb8 solid;
     border-radius: 3px;
 }
 
