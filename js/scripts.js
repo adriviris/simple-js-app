@@ -72,7 +72,7 @@ function loadList(){
         pokemonRespository.loadDetails(pokemon).then(function () {
             showModal(
                 pokemon.name,
-                pokemon.name + "'s heoght is:" + pokemon.height,
+                pokemon.name + "'s height is:" + pokemon.height,
                 pokemon.imageURL
             );
         });
