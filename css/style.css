@@ -7,10 +7,10 @@
 }
 
 .button-class{
-    background-color: salmon;
+    background-color: #deb110;
     border: 1px;
-    border-color: white;
-    color: antiquewhite;
+    border-color: #0d4eb8;
+    color: #0d4eb8;
     padding: auto;
     text-align: center;
     text-decoration: none;
