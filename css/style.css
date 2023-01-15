@@ -17,11 +17,11 @@
     display: inline-block;
     font-family: 'quicksand';
     font-size: 16px;
-    margin: auto;
+    margin: center;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s; 
     cursor: pointer;
-    border: 2px whitesmoke solid;
+    border: 2px #0d4eb8;
     border-radius: 3px;
 }
 
