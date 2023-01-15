@@ -69,7 +69,7 @@ function loadList(){
     }
 
     function showDetails(pokemon) {
-        pokemonRespository.loadDetails(pokemon).then(function () {
+        pokemonRepository.loadDetails(pokemon).then(function () {
             showModal(
                 pokemon.name,
                 pokemon.name + "'s height is:" + pokemon.height,
@@ -88,9 +88,9 @@ function loadList(){
     };
 })();
 
-pokemonRespository.loadList().then(function(){
+pokemonRepository.loadList().then(function(){
     //data is loaded
-    pokemonRespository.getAll().forEach(function(pokemon){
-        pokemonRespository.addListItem(pokemon);
+    pokemonRepository.getAll().forEach(function(pokemon){
+        pokemonRepository.addListItem(pokemon);
     });
 });
