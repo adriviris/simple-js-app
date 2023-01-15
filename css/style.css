@@ -6,26 +6,6 @@
     font-family: 'sofia sans extra condensed';
 }
 
-.pokemonList {
-    background-color: salmon;
-    border: 1px;
-    color: antiquewhite;
-    padding: auto;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'quicksand';
-    font-size: 10px;
-    margin: auto;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s; 
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 3px;
-}
-
 .button {
     background-color: salmon;
     border: 1px;
