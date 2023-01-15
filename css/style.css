@@ -6,6 +6,19 @@
     font-family: 'sofia sans extra condensed';
 }
 
+.button-class{
+    background-color: salmon;
+    border: 1px;
+    color: antiquewhite;
+    padding: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'quicksand';
+    font-size: 16px;
+    margin: auto;
+}
+
 .button {
     background-color: salmon;
     border: 1px;
