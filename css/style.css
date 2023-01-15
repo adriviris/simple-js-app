@@ -3,7 +3,9 @@
     margin-top: 90px; 
     display: flex;
     flex-direction: column;
-    font-family: 'sofia sans extra condensed';
+    font-family: 'sofia sans condensed';
+    font-size: 30px;
+    color: #0d4eb8;
 }
 
 .button-class{
