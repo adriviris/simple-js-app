@@ -9,6 +9,7 @@
 .button-class{
     background-color: salmon;
     border: 1px;
+    border-color: white;
     color: antiquewhite;
     padding: auto;
     text-align: center;
@@ -20,10 +21,7 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s; 
     cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 3px;
+
 }
 
 .button {
