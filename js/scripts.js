@@ -70,7 +70,7 @@ function loadList(){
 
 // show modal w pokemon details
 
-/*function showModal(title, text, img) {
+function showModal(title, text, img) {
     let modalTitle = document.querySelector(".modal-title");
     modalTitle.innerText = title; 
     let contentElement = document.querySelector("p");
@@ -80,10 +80,10 @@ function loadList(){
     imageElement.setAttribute("alt", "Pokemon image");
     imageElement.setAttribute("width", 150);
     imageElement.setAttribute("height", 150);
-}*/
+}
 
 //FIGURING OUT HOW TO SHOW DETAILS WHEN CLICKING ON BUTTON
-/*    function showDetails(pokemon) {
+    function showDetails(pokemon) {
         pokemonRepository.loadDetails(pokemon).then(function () {
             showModal(
                 pokemon.name,
@@ -91,9 +91,9 @@ function loadList(){
                 pokemon.imageURL
             );
         });
-    }*/
+    }
 
-    //function to show details
+ /*   //function to show details
     function showDetails(pokemon){
         loadDetails(pokemon).then(function () {
             showDetailsModal(pokemon);
@@ -118,7 +118,7 @@ function showDetailsModal(pokemon){
     modalBody.append(height);
     modalBody.append(weight);
     modalBody.append(types);
-}
+}*/
 
     return {
         add: add,
