@@ -18,7 +18,7 @@
     padding: auto;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-family: 'sofia sans condensed';
     font-size: 16px;
     margin: auto;
@@ -31,7 +31,7 @@
 }
 
 .button {
-    background-color: salmon;
+    background-color: #0d4eb8;
     border: 1px;
     color: antiquewhite;
     padding: auto;
