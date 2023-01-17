@@ -27,6 +27,7 @@
     cursor: pointer;
     border: 2px #0d4eb8 solid;
     border-radius: 3px;
+
 }
 
 .button {
@@ -49,7 +50,7 @@
     border-radius: 3px;
 } 
 
-.button:hover {
+button:hover {
     background-color: #0d4eb8; /* Green */
     color: white;
 }
