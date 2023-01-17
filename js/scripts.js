@@ -68,6 +68,18 @@ function loadList(){
         });
     }
 
+function showModal(title, text, img) {
+    let modalTitle = document.querySelector(".modal-title");
+    modalTitle.innerText = title; 
+    let contentElement = document.querySelector("p");
+    contentElement.innerText = text;
+    let imageElement = document.querySelector("img");
+    imageElement.setAttribute("src", img);
+    imageElement.setAttribute("alt", "Pokemon image");
+    imageElement.setAttribute("width", 150);
+    imageElement.setAttribute("height", 150);
+}
+
     function showDetails(pokemon) {
         pokemonRepository.loadDetails(pokemon).then(function () {
             showModal(
