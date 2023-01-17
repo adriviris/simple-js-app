@@ -70,20 +70,20 @@ function loadList(){
 
 // show modal w pokemon details
 
-function showModal(title, text, img) {
+/*function showModal(title, text, img) {
     let modalTitle = document.querySelector(".modal-title");
     modalTitle.innerText = title; 
-    let contentElement = document.querySelector("p");
+    let contentElement = document.querySelector(".p");
     contentElement.innerText = text;
-    let imageElement = document.querySelector("img");
+    let imageElement = document.querySelector(".img");
     imageElement.setAttribute("src", img);
     imageElement.setAttribute("alt", "Pokemon image");
     imageElement.setAttribute("width", 150);
     imageElement.setAttribute("height", 150);
-}
+}*/
 
 //FIGURING OUT HOW TO SHOW DETAILS WHEN CLICKING ON BUTTON
-    function showDetails(pokemon) {
+/*    function showDetails(pokemon) {
         pokemonRepository.loadDetails(pokemon).then(function () {
             showModal(
                 pokemon.name,
@@ -91,9 +91,9 @@ function showModal(title, text, img) {
                 pokemon.imageURL
             );
         });
-    }
+    }*/
 
- /*   //function to show details
+    //function to show details
     function showDetails(pokemon){
         loadDetails(pokemon).then(function () {
             showDetailsModal(pokemon);
@@ -112,13 +112,13 @@ function showDetailsModal(pokemon){
     let height = $("<p>" + "Height: " + pokemon.height + "</p>");
     let weight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
     let types = $("<p>" + "Types: " + pokemon.types + "</p>");
-    let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");
+    /*let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");*/
 
     modalBody.append(image);
     modalBody.append(height);
     modalBody.append(weight);
     modalBody.append(types);
-}*/
+}
 
     return {
         add: add,
@@ -126,7 +126,8 @@ function showDetailsModal(pokemon){
         addListItem : addListItem,
         loadList:loadList,
         loadDetails : loadDetails,
-        showDetails : showDetails
+        showDetails : showDetails,
+        showDetailsModal : showDetailsModal
     };
 })();
 
