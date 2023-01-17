@@ -11,16 +11,17 @@
 }
 
 .button-class{
+    
     background-color: #deb110;
     border: 1px;
     border-color: #0d4eb8;
     color: #0d4eb8;
-    padding: 4px;
+    padding: 14px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: 'sofia sans condensed';
-    font-size: 16px;
+    font-size: 20px;
     margin: auto;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s; 
