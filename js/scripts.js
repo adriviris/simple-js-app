@@ -68,6 +68,8 @@ function loadList(){
         });
     }
 
+// show modal w pokemon details
+
 function showModal(title, text, img) {
     let modalTitle = document.querySelector(".modal-title");
     modalTitle.innerText = title; 
@@ -96,7 +98,8 @@ function showModal(title, text, img) {
         addListItem : addListItem,
         loadList:loadList,
         loadDetails : loadDetails,
-        showDetails : showDetails
+        showDetails : showDetails,
+        showModal : showModal
     };
 })();
 
