@@ -70,7 +70,7 @@ function loadList(){
 
 // show modal w pokemon details
 
-function showModal(title, text, img) {
+/*function showModal(title, text, img) {
     let modalTitle = document.querySelector(".modal-title");
     modalTitle.innerText = title; 
     let contentElement = document.querySelector("p");
@@ -80,9 +80,10 @@ function showModal(title, text, img) {
     imageElement.setAttribute("alt", "Pokemon image");
     imageElement.setAttribute("width", 150);
     imageElement.setAttribute("height", 150);
-}
+}*/
 
-    function showDetails(pokemon) {
+//FIGURING OUT HOW TO SHOW DETAILS WHEN CLICKING ON BUTTON
+/*    function showDetails(pokemon) {
         pokemonRepository.loadDetails(pokemon).then(function () {
             showModal(
                 pokemon.name,
@@ -90,7 +91,34 @@ function showModal(title, text, img) {
                 pokemon.imageURL
             );
         });
+    }*/
+
+    //function to show details
+    function showDetails(pokemon){
+        loadDetails(pokemon).then(function () {
+            showDetailsModal(pokemon);
+        });
     }
+
+//function to show details modal
+function showDetailsModal(pokemon){
+    let modalBody = $('.modal-body');
+    let modalTitle = $('.modal-title');
+
+    modalBody.empty();
+    modalTitle.text(pokemon.name);
+
+    let image = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
+    let height = $("<p>" + "Height: " + pokemon.height + "</p>");
+    let weight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
+    let types = $("<p>" + "Types: " + pokemon.types + "</p>");
+    let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");
+
+    modalBody.append(image);
+    modalBody.append(height);
+    modalBody.append(weight);
+    modalBody.append(types);
+}
 
     return {
         add: add,
@@ -98,8 +126,7 @@ function showModal(title, text, img) {
         addListItem : addListItem,
         loadList:loadList,
         loadDetails : loadDetails,
-        showDetails : showDetails,
-        showModal : showModal
+        showDetails : showDetails
     };
 })();
 
