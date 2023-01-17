@@ -15,10 +15,10 @@
     border: 1px;
     border-color: #0d4eb8;
     color: #0d4eb8;
-    padding: auto;
+    padding: 4px;
     text-align: center;
     text-decoration: none;
-    display: inline-block, center;
+    display: inline-block;
     font-family: 'sofia sans condensed';
     font-size: 16px;
     margin: auto;
