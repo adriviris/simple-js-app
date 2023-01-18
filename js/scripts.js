@@ -30,6 +30,7 @@ button.innerText = pokemon.name;
 button.classList.add ('button-class');
 listItem.appendChild(button);
 pokemonList.appendChild(button);
+
 //add event listener to show details when clicked pokemon
 button.addEventListener("click", function() {
     showDetails(pokemon);
@@ -93,6 +94,7 @@ function loadList(){
         });
     }*/
 
+
     //function to show details
     function showDetails(pokemon){
         loadDetails(pokemon).then(function () {
@@ -114,10 +116,20 @@ function showDetailsModal(pokemon){
     let types = $("<p>" + "Types: " + pokemon.types + "</p>");
     /*let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");*/
 
+// Add the new modal content TRYING TO GET CLOSE BUTTON
+/*let closeButtonElement = document.createElement('button');
+closeButtonElement.classList.add('modal-close');
+closeButtonElement.innerText = 'Close';*/
+
+
+
     modalBody.append(image);
     modalBody.append(height);
     modalBody.append(weight);
     modalBody.append(types);
+    
+
+modalBody.classList.add('is-visible');
 }
 
     return {

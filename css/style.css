@@ -68,3 +68,35 @@ button:hover {
     color: red;
     font-size: 0.8em;
 }
+
+
+.modal-body {
+    display: inline-block;
+    box-sizing: border-box;
+    margin:10%; 
+    padding: 5%;
+    width: 10%;
+    position:fixed ;
+    z-index: 1;
+    left: 0;top: 0;
+    height: auto;
+    width: 40%;
+    overflow: auto;
+    background-color: #deb110 ;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+    font-family: 'sofia sans condensed';
+    color: #0d4eb8;
+    font-size: 35px;
+    display: grid;
+    text-align: center;
+    
+}
+
+.modal-close {
+    float: right;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: #0d4eb8;
+    text-decoration: underline;
+}
