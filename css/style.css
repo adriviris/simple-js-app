@@ -74,12 +74,12 @@ button:hover {
     display: inline-block;
     box-sizing: border-box;
     margin:10%; 
-    padding: 5%;
+    padding: 20px;
     width: 10%;
     position:fixed ;
     z-index: 1;
     left: 0;top: 0;
-    height: auto;
+    height: 400px;
     width: 40%;
     overflow: auto;
     background-color: #deb110 ;
@@ -87,9 +87,26 @@ button:hover {
     font-family: 'sofia sans condensed';
     color: #0d4eb8;
     font-size: 35px;
-    display: grid;
     text-align: center;
     
+}
+
+#modal-cntr {
+    display: none;
+}
+
+#modal-cntr.is-visible {
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    overflow : auto;
+    display : grid;
 }
 
 .modal-close {

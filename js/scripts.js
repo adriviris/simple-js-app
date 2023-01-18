@@ -69,32 +69,6 @@ function loadList(){
         });
     }
 
-// show modal w pokemon details
-
-/*function showModal(title, text, img) {
-    let modalTitle = document.querySelector(".modal-title");
-    modalTitle.innerText = title; 
-    let contentElement = document.querySelector(".p");
-    contentElement.innerText = text;
-    let imageElement = document.querySelector(".img");
-    imageElement.setAttribute("src", img);
-    imageElement.setAttribute("alt", "Pokemon image");
-    imageElement.setAttribute("width", 150);
-    imageElement.setAttribute("height", 150);
-}*/
-
-//FIGURING OUT HOW TO SHOW DETAILS WHEN CLICKING ON BUTTON
-/*    function showDetails(pokemon) {
-        pokemonRepository.loadDetails(pokemon).then(function () {
-            showModal(
-                pokemon.name,
-                pokemon.name + "'s height is:" + pokemon.height,
-                pokemon.imageURL
-            );
-        });
-    }*/
-
-
     //function to show details
     function showDetails(pokemon){
         loadDetails(pokemon).then(function () {
@@ -104,6 +78,7 @@ function loadList(){
 
 //function to show details modal
 function showDetailsModal(pokemon){
+    const modalContainer = $('#modal-cntr');
     let modalBody = $('.modal-body');
     let modalTitle = $('.modal-title');
 
@@ -111,25 +86,27 @@ function showDetailsModal(pokemon){
     modalTitle.text(pokemon.name);
 
     let image = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
+    let buttonClose = $('<button class="modal-close")>Close</button>');
     let height = $("<p>" + "Height: " + pokemon.height + "</p>");
     let weight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
     let types = $("<p>" + "Types: " + pokemon.types + "</p>");
     /*let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");*/
 
-// Add the new modal content TRYING TO GET CLOSE BUTTON
-/*let closeButtonElement = document.createElement('button');
-closeButtonElement.classList.add('modal-close');
-closeButtonElement.innerText = 'Close';*/
+buttonClose.on('click', hideModal);
 
-
-
+    modalBody.append(buttonClose);
     modalBody.append(image);
     modalBody.append(height);
     modalBody.append(weight);
     modalBody.append(types);
     
 
-modalBody.classList.add('is-visible');
+modalBody.classList.add("is-visible");
+}
+
+function hideModal() {
+    const modalContainer = $('#modal-cntr');
+    modalContainer.removeClass ("is-visible");
 }
 
     return {
