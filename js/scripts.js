@@ -77,6 +77,7 @@ function loadList(){
     }
 
 //function to show details modal
+
 function showDetailsModal(pokemon){
     const modalContainer = $('#modal-cntr');
     let modalBody = $('.modal-body');
@@ -101,7 +102,7 @@ buttonClose.on('click', hideModal);
     modalBody.append(types);
     
 
-modalBody.classList.add("is-visible");
+modalContainer.addClass("is-visible");
 }
 
 function hideModal() {
