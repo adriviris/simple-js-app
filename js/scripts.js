@@ -91,7 +91,7 @@ function showDetailsModal(pokemon){
     let height = $("<p>" + "Height: " + pokemon.height + "</p>");
     let weight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
     let types = $("<p>" + "Types: " + pokemon.types + "</p>");
-    /*let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");*/
+    let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");
 
 buttonClose.on('click', hideModal);
 
@@ -100,6 +100,7 @@ buttonClose.on('click', hideModal);
     modalBody.append(height);
     modalBody.append(weight);
     modalBody.append(types);
+    modalBody.append(abilities);
     
 
 modalContainer.addClass("is-visible");
