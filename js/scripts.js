@@ -30,6 +30,9 @@ button.innerText = pokemon.name;
 button.classList.add ('button-class');
 listItem.appendChild(button);
 pokemonList.appendChild(button);
+button.setAttribute('data-toggle', 'modal');
+button.setAttribute('data-target', '.modal');
+
 
 //add event listener to show details when clicked pokemon
 button.addEventListener("click", function() {
