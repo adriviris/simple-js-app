@@ -128,7 +128,7 @@ function hideModal() {
         loadList:loadList,
         loadDetails : loadDetails,
         showDetails : showDetails,
-        hideModal : hideModal,
+     //   hideModal : hideModal,
         showDetailsModal : showDetailsModal
     };
 })();
