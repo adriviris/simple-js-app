@@ -34,6 +34,7 @@ button.setAttribute('data-toggle', 'modal');
 button.setAttribute('data-target', '.modal');
 
 
+
 //add event listener to show details when clicked pokemon
 button.addEventListener("click", function() {
     showDetails(pokemon);
@@ -65,6 +66,7 @@ function loadList(){
             //add details to the item
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
+            item.weight = details.weight;
             item.types = details.types.map((type) => type.type.name);
             item.abilities = details.abilities.map((abilities) => abilities.ability.name);
         }).catch(function(e) {
@@ -82,12 +84,13 @@ function loadList(){
 //function to show details modal
 
 function showDetailsModal(pokemon){
-    const modalContainer = $('#modal-cntr');
+    //const modalContainer = $('#modal-cntr');
     let modalBody = $('.modal-body');
     let modalTitle = $('.modal-title');
 
     modalBody.empty();
     modalTitle.text(pokemon.name);
+    
 
     let image = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
     let buttonClose = $('<button class="modal-close")>Close</button>');
@@ -98,6 +101,7 @@ function showDetailsModal(pokemon){
 
 buttonClose.on('click', hideModal);
 
+
     modalBody.append(buttonClose);
     modalBody.append(image);
     modalBody.append(height);
@@ -106,12 +110,15 @@ buttonClose.on('click', hideModal);
     modalBody.append(abilities);
     
 
-modalContainer.addClass("is-visible");
+    $('#pokemonModal').show();
+    $('#pokemonModal').removeClass('hide');
+    $('.modal-backdrop').removeClass('hide');
 }
 
 function hideModal() {
-    const modalContainer = $('#modal-cntr');
-    modalContainer.removeClass ("is-visible");
+    $('#pokemonModal').addClass('hide');
+    $('#pokemonModal').hide();
+    $('.modal-backdrop').addClass('hide');
 }
 
     return {
@@ -121,6 +128,7 @@ function hideModal() {
         loadList:loadList,
         loadDetails : loadDetails,
         showDetails : showDetails,
+ //       hideModal : hideModal,
         showDetailsModal : showDetailsModal
     };
 })();
