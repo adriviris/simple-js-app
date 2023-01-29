@@ -5,7 +5,8 @@ h1{
     color: #0d4eb8;
     font-family: 'sofia sans condensed';
     text-align: auto;
-    margin: auto;
+    margin : auto;
+    margin-top: 60px;
     display: flex
 }
 /*.pokedex {
