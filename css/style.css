@@ -120,6 +120,13 @@ button:hover {
 }
 
 .page-container {
-    margin-top: 80px;
-    
+    margin-top: 60px;
     }
+
+.modal-backdroip.hide{
+    display : none;
+}
+
+#pokemonModal.hide{
+    display: none;
+}
