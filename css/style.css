@@ -19,8 +19,12 @@ h1{
     color: #0d4eb8;
 } */
 
+.pokemon-list {
+    align-items: center;
+}
+
 .button-class{
-    
+    width : 200px;
     background-color: #deb110;
     border: 1px;
     border-color: #0d4eb8;
