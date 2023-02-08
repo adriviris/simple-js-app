@@ -7,12 +7,12 @@ let pokemonRepository = (function(){
 //add new pokemon to pokemonList array
 function add(pokemon) {
     if (
-        typeof pokemon === "object" &&
-        "name" in pokemon
+        typeof pokemon === 'object' &&
+        'name' in pokemon
     ){
     pokemonList.push(pokemon);
 } else {
-    console.log("pokemon is not correct")
+    console.log('pokemon is not correct')
 }
 }
 
@@ -36,7 +36,7 @@ button.setAttribute('data-target', '.modal');
 
 
 //add event listener to show details when clicked pokemon
-button.addEventListener("click", function() {
+button.addEventListener('click', function() {
     showDetails(pokemon);
 });
 }
@@ -94,10 +94,10 @@ function showDetailsModal(pokemon){
 
     let image = $('<img class="pokemon-img" src="' + pokemon.imageUrl + '" />');
     let buttonClose = $('<button class="modal-close")>Close</button>');
-    let height = $("<p>" + "Height: " + pokemon.height + "</p>");
-    let weight = $("<p>" + "Weight: " + pokemon.weight + "</p>");
-    let types = $("<p>" + "Types: " + pokemon.types + "</p>");
-    let abilities = $("<p>" + "Abilities: " + pokemon.abilities + "</p>");
+    let height = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+    let weight = $('<p>' + 'Weight: ' + pokemon.weight + '</p>');
+    let types = $('<p>' + 'Types: ' + pokemon.types + '</p>');
+    let abilities = $('<p>' + 'Abilities: ' + pokemon.abilities + '</p>');
 
 buttonClose.on('click', hideModal);
 
