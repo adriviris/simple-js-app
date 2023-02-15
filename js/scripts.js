@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 //add api w pokemon details
 let pokemonRepository = (function(){
